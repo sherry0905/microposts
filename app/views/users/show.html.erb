@@ -6,5 +6,6 @@
 <ul>
   <li>Location：<%= @user.location %></li>
   <li>age：<%= @user.age %></li>
-  <li>profile：<%= @user.profile %></li>
+  <li style="word-wrap: break-word;max-width: 200px;">
+    profile：<%= simple_format @user.profile %></li>
 </ul>
