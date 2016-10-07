@@ -9,4 +9,10 @@ class User < ActiveRecord::Base
   has_secure_password
   
   validates :location, allow_blank: true, length: { minimum: 3, maximum: 10 }
+  
+  validates :age, allow_blank: true, numericality: { only_integer: true,
+                                                    greater_than_or_equal_to: 0,
+                                                    less_than: 100 }
+
+  validates :profile, allow_blank: true, length: { minimum: 10, maximum: 100 }
 end
